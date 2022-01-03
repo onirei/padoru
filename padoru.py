@@ -84,7 +84,7 @@ class Padoru:
             loader += 1  # 339
             percent = round(loader / 339 * 100, 1)
             text = self.font.render(str(f'{percent}%'), False, WHITE)
-            self.screen.blit(text, (WIDTH/2, HEIGHT/2-16))
+            self.screen.blit(text, ((WIDTH - text.get_rect().width)/2, HEIGHT/2-16))
             pg.display.update()
 
     def play(self):
