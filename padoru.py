@@ -72,8 +72,8 @@ class Padoru:
             for i, line in enumerate(lines):
                 for j, char in enumerate(line):
                     image.blit(self.ascii_font.render(char, False, WHITE), (self.font_size * j, self.font_size * i))
-            im = cv2.resize(img, (320, 180), fx=0, fy=0, interpolation=cv2.INTER_CUBIC)
-            image.blit(pg.image.frombuffer(im.tobytes(), (320, 180), "BGR"), (0, 0))
+            img = cv2.resize(img, (320, 180), fx=0, fy=0, interpolation=cv2.INTER_CUBIC)
+            image.blit(pg.image.frombuffer(img.tobytes(), (320, 180), "BGR"), (0, 0))
             self.frames.append(image)
 
             sprite = pg.Surface((160, 160))
